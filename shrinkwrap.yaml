@@ -1,4 +1,5 @@
 dependencies:
+  formidable: 1.2.1
   lodash: 4.17.5
   pdfjs-dist: 2.0.489
 packages:
@@ -38,6 +39,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-1RQsDK7msRifh9OnYREGT4bIu/I=
+  /formidable/1.2.1:
+    dev: false
+    resolution:
+      integrity: sha512-Fs9VRguL0gqGHkXS5GQiMCr1VhZBxz0JnJs4JmMp/2jL18Fmbzvv7vOFRU+U8TBkHEE/CX1qDXzJplVULgsLeg==
   /json-schema-traverse/0.3.1:
     dev: false
     resolution:
@@ -111,5 +116,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  formidable: ^1.2.1
   lodash: ^4.17.5
   pdfjs-dist: ^2.0.480
