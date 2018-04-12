@@ -11,8 +11,7 @@ http
   .createServer(async (req, res) => {
     try {
       if (req.method.toLowerCase() == 'post') {
-        var form = new formidable.IncomingForm()
-        form.parse(req, function(err, fields, files) {
+        new formidable.IncomingForm().parse(req, (err, fields, files) => {
           res.writeHead(200, { 'content-type': 'text/plain' })
           res.write('received upload:\n\n')
           res.end(util.inspect({ fields: fields, files: files }))
