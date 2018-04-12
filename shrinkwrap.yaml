@@ -1,12 +1,115 @@
 dependencies:
   lodash: 4.17.5
+  pdfjs-dist: 2.0.489
 packages:
+  /ajv-keywords/3.1.0/ajv@6.4.0:
+    dependencies:
+      ajv: 6.4.0
+    dev: false
+    id: registry.npmjs.org/ajv-keywords/3.1.0
+    peerDependencies:
+      ajv: ^6.0.0
+    resolution:
+      integrity: sha1-rCsnk5xUPpXSwG5/f1wnvkqlQ74=
+  /ajv/6.4.0:
+    dependencies:
+      fast-deep-equal: 1.1.0
+      fast-json-stable-stringify: 2.0.0
+      json-schema-traverse: 0.3.1
+      uri-js: 3.0.2
+    dev: false
+    resolution:
+      integrity: sha1-06/3jpJ3VJdx2vAWTP9ISCt1T8Y=
+  /big.js/3.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==
+  /emojis-list/2.1.0:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
+  /fast-deep-equal/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-wFNHeBfIa1HaqFPIHgWbcz0CNhQ=
+  /fast-json-stable-stringify/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-1RQsDK7msRifh9OnYREGT4bIu/I=
+  /json-schema-traverse/0.3.1:
+    dev: false
+    resolution:
+      integrity: sha1-NJptRMU6Ud6JtAgFxdXlm0F9M0A=
+  /json5/0.5.1:
+    dev: false
+    resolution:
+      integrity: sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
+  /loader-utils/1.1.0:
+    dependencies:
+      big.js: 3.2.0
+      emojis-list: 2.1.0
+      json5: 0.5.1
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha1-yYrvSIvM7aL/teLeZG1qdUQp9c0=
   /lodash/4.17.5:
     dev: false
     resolution:
       integrity: sha512-svL3uiZf1RwhH+cWrfZn3A4+U58wbP0tGVTLQPbjplZxZ8ROD9VLuNgsRniTlLe7OlSqR79RUehXgpBW/s0IQw==
+  /node-ensure/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-7K52QVDemYYexcgQ/V0Jaxg5Mqc=
+  /pdfjs-dist/2.0.489:
+    dependencies:
+      node-ensure: 0.0.0
+      worker-loader: 1.1.1
+    dev: false
+    peerDependencies:
+      webpack: ^2.0.0 || ^3.0.0
+    resolution:
+      integrity: sha1-Y+VLKSqGeQpFRpfrRNQ0e4+/rSc=
+  /punycode/2.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha1-X4Y+3Im5bbCQdLrXlHvwkFbKTn0=
+  /schema-utils/0.4.5:
+    dependencies:
+      ajv: 6.4.0
+      ajv-keywords: /ajv-keywords/3.1.0/ajv@6.4.0
+    dev: false
+    engines:
+      node: '>= 4.8.0 || >= 6.9.0 || >= 8.9.0'
+    peerDependencies:
+      webpack: ^2.0.0 || ^3.0.0 || ^4.0.0
+    resolution:
+      integrity: sha512-yYrjb9TX2k/J1Y5UNy3KYdZq10xhYcF8nMpAW6o3hy6Q8WSIEf9lJHG/ePnOBfziPM3fvQwfOwa13U/Fh8qTfA==
+  /uri-js/3.0.2:
+    dependencies:
+      punycode: 2.1.0
+    dev: false
+    resolution:
+      integrity: sha1-+QuFhQf4HepNz7s8TD2/orVX+qo=
+  /worker-loader/1.1.1:
+    dependencies:
+      loader-utils: 1.1.0
+      schema-utils: 0.4.5
+    dev: false
+    engines:
+      node: '>= 4.8 < 5.0.0 || >= 5.10'
+    peerDependencies:
+      webpack: ^2.0.0 || ^3.0.0 || ^4.0.0
+    resolution:
+      integrity: sha512-qJZLVS/jMCBITDzPo/RuweYSIG8VJP5P67mP/71alGyTZRe1LYJFdwLjLalY3T5ifx0bMDRD3OB6P2p1escvlg==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   lodash: ^4.17.5
+  pdfjs-dist: ^2.0.480
