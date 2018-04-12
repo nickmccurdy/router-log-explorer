@@ -15,8 +15,9 @@ http
     try {
       if (req.method.toLowerCase() == 'post') {
         new formidable.IncomingForm().parse(req, (err, _, files) => {
-          res.setHeader('content-type', 'text/plain')
-          res.end(util.inspect(files.upload))
+          if (err) throw err
+          res.setHeader('content-type', 'application/pdf')
+          fs.createReadStream(files.upload.path).pipe(res)
         })
       } else if (query.ip) {
         const ips = _.castArray(query.ip)
@@ -29,9 +30,8 @@ http
         fs.createReadStream('./index.html').pipe(res)
       }
     } catch (err) {
-      throw err
-      // res.statusCode = 500
-      // res.end(JSON.stringify(err))
+      res.statusCode = 500
+      res.end(JSON.stringify(err))
     }
   })
   .listen(process.env.PORT)
