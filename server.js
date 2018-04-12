@@ -16,8 +16,14 @@ http
       if (req.method.toLowerCase() == 'post') {
         new formidable.IncomingForm().parse(req, (err, _, files) => {
           if (err) throw err
-          res.setHeader('content-type', 'application/pdf')
-          fs.createReadStream(files.upload.path).pipe(res)
+          // res.setHeader('content-type', 'application/pdf')
+          // fs.createReadStream(files.upload.path).pipe(res)
+          
+          const pdfDocument = await pdfjsLib.getDocument(files.upload.path);
+          const page = await pdfDocument.getPage(1);
+          const textContent = await page.getTextContent();
+          console.log(textContent.items.map(item => item.str).join(' '));
+          res.end();
         })
       } else if (query.ip) {
         const ips = _.castArray(query.ip)
