@@ -11,9 +11,9 @@ const reverse = util.promisify(dns.reverse)
 
 http
   .createServer(async (req, res) => {
-    const query = url.parse(req.url, true).query
-
     try {
+      const query = url.parse(req.url, true).query
+
       if (req.method.toLowerCase() == 'post') {
         new formidable.IncomingForm().parse(req, async (err, _, files) => {
           if (err) throw err
