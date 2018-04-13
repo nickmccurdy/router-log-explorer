@@ -19,11 +19,11 @@ http
           if (err) throw err
           // res.setHeader('content-type', 'application/pdf')
           // fs.createReadStream(files.upload.path).pipe(res)
-          
-          const pdfDocument = await pdfjs.getDocument(files.upload.path);
-          const page = await pdfDocument.getPage(1);
-          const textContent = await page.getTextContent();
-          res.end(textContent.items.map(item => item.str).join(' '));
+
+          const pdfDocument = await pdfjs.getDocument(files.upload.path)
+          const page = await pdfDocument.getPage(1)
+          const textContent = await page.getTextContent()
+          res.end(textContent.items.map(item => item.str).join(' '))
         })
       } else if (query.ip) {
         const ips = _.castArray(query.ip)
