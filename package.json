@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "formidable": "^1.2.1",
-    "lodash": "^4.17.5",
-    "pdfjs-dist": "^2.0.480"
+    "jsdom": "^11.7.0",
+    "lodash": "^4.17.5"
   },
   "prettier": {
     "semi": false,
