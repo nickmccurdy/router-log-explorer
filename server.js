@@ -7,8 +7,6 @@ const pdfjs = require('pdfjs-dist')
 const url = require('url')
 const util = require('util')
 
-const reverse = util.promisify(dns.reverse)
-
 http
   .createServer(async (req, res) => {
     try {
@@ -35,7 +33,9 @@ http
       } else if (query.ip) {
         const ips = _.castArray(query.ip)
         const hostnames = _.uniq(
-          _.flatten(await Promise.all(ips.map(ip => reverse(ip))))
+          _.flatten(
+            await Promise.all(ips.map(ip => util.promisify(dns.reverse)(ip)))
+          )
         )
         res.end(JSON.stringify(hostnames))
       } else {
