@@ -40,4 +40,4 @@ http
       res.end(JSON.stringify(err))
     }
   })
-  .listen(process.env.PORT)
+  .listen(process.env.PORT || 3000)
